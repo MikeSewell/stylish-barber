@@ -3,31 +3,23 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { Container, Header, Content, Button } from 'native-base';
 import { TabNavigator } from 'react-navigation'; // 1.0.0-beta.27
 
-export default class Dashboard extends Component {
+export default class Appointment extends Component {
     static navigationOptions = {
         header: null
     }
     render() {
         return (
             <View style={styles.wrapper}>
-                <Text style={styles.textContent}>Stylish Barber</Text>
-                <View style={styles.container}>
-                    <Image style={styles.image}
-                        source={require('../src/images/barCut.png')} />
-                </View>
-                <Button style={styles.btn}><Text style={styles.btnContent}> Email </Text></Button>
-                <Button style={styles.btn}
-                    onPress={() => this.props.navigation.navigate('Services')}
-                ><Text style={styles.btnContent}> Services </Text></Button>
-                <Button style={styles.btn}
-                    onPress={() => this.props.navigation.navigate('Gallery')}
-                ><Text style={styles.btnContent}> Gallery </Text></Button>
+                <Text style={styles.textContent}>Gallery</Text>
+                <Button
+                    onPress={() => this.props.navigation.goBack()}
+                ><Text>Back</Text></Button>
             </View>
         );
     }
 }
 const styles = StyleSheet.create({
-    wrapper:{
+    wrapper: {
         flex: 1,
         backgroundColor: '#ba4d4d',
         justifyContent: 'center',
