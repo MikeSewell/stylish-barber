@@ -3,39 +3,10 @@ import { Text, View, StyleSheet } from 'react-native';
 import { TabNavigator, TabBarBottom } from 'react-navigation'; // 1.0.0-beta.27
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import Dashboard from './screens/dashboard';
+import Goto from './screens/goto';
+import Appt from './screens/appointment';
 
-
-
-class AboutScreen extends Component {
-  render() {
-    console.log(this.props);
-    return (
-      <View style={styles.container}>
-
-      </View>
-    );
-  }
-}
-
-class MapScreen extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-
-      </View>
-    );
-  }
-}
-
-class ApptScreen extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-
-      </View>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -51,11 +22,9 @@ const styles = StyleSheet.create({
 });
 
 export default TabNavigator({
-  About: { screen: AboutScreen },
-  Map: { screen: MapScreen },
-  Appt: {
-    screen: ApptScreen
-  }
+  About: { screen: Dashboard },
+  Map: { screen: Goto },
+  Appt: { screen: Appt }
 },
   {
     navigationOptions: ({ navigation }) => ({
