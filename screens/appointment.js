@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Image } from 'react-native';
 import { Container, Header, Content, Button } from 'native-base';
 import { TabNavigator } from 'react-navigation'; // 1.0.0-beta.27
 
-export default class Dashboard extends Component {
+export default class Appointment extends Component {
 
     render() {
         return (

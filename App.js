@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { TabNavigator, TabBarBottom } from 'react-navigation'; // 1.0.0-beta.27
+import { TabNavigator, StackNavigator, TabBarBottom } from 'react-navigation'; // 1.0.0-beta.27
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Dashboard from './screens/dashboard';
 import Goto from './screens/goto';
 import Appt from './screens/appointment';
+import Gallery from './screens/gallery';
+import Services from './screens/services';
 
 
 const styles = StyleSheet.create({
@@ -22,7 +24,13 @@ const styles = StyleSheet.create({
 });
 
 export default TabNavigator({
-  About: { screen: Dashboard },
+  About: { 
+    screen: StackNavigator({
+      Dashboard:{ screen: Dashboard },
+      Services:{ screen: Services },
+      Gallery: { screen: Gallery }
+    }) 
+  },
   Map: { screen: Goto },
   Appt: { screen: Appt }
 },
