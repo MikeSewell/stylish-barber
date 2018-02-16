@@ -9,7 +9,6 @@ export default class Appointment extends Component {
         return (
             <View style={styles.wrapper}>
                 <Text style={styles.textContent}>Set Appointment</Text>
-  
                 <Button style={styles.btn}
                     onPress={() => this.props.navigation.navigate('Appt')}
                 ><Text style={styles.btnContent}> Email </Text></Button>

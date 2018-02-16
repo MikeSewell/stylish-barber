@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, Linking } from 'react-native';
 import { Container, Header, Content, Button } from 'native-base';
 import { TabNavigator } from 'react-navigation'; // 1.0.0-beta.27
 
@@ -15,7 +15,9 @@ export default class Dashboard extends Component {
                     <Image style={styles.image}
                         source={require('../src/images/barCut.png')} />
                 </View>
-                <Button style={styles.btn}><Text style={styles.btnContent}> Email </Text></Button>
+                <Button style={styles.btn}
+                    onPress={() => Linking.openURL('mailto:sharod.g@gmail.com?subject=Stylish Barber App&body=body')}
+                ><Text style={styles.btnContent}> Email </Text></Button>
                 <Button style={styles.btn}
                     onPress={() => this.props.navigation.navigate('Services')}
                 ><Text style={styles.btnContent}> Services </Text></Button>
