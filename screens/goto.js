@@ -10,7 +10,7 @@ export default class NextAppt extends Component {
                 <Text style={styles.titleContent}>Stylish Barber</Text>
                 <Text style={styles.textContent}>Your next appointment:</Text>
                 <View>
-                    <Text style={styles.textContent}>
+                    <Text style={styles.textContentAppt}>
                         appointment datetime
                     </Text>
                 </View>
@@ -38,6 +38,10 @@ const styles = StyleSheet.create({
     textContent: {
         alignSelf: 'center',
         color: '#333',
+    },
+    textContentAppt:{
+        paddingTop:20,
+        paddingBottom:20
     },
     btn: {
         borderRadius: 0,

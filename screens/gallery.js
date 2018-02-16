@@ -13,6 +13,7 @@ export default class Appointment extends Component {
                 <Text style={styles.textContent}>Gallery</Text>
                 <Button
                     onPress={() => this.props.navigation.goBack()}
+                    style={styles.btn}
                 ><Text>Back</Text></Button>
             </View>
         );
@@ -37,12 +38,7 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     btn: {
-        borderRadius: 0,
-        width: 175,
-        marginTop: 6,
-        justifyContent: 'center',
-        alignSelf: 'center',
-        backgroundColor: '#333',
+        display:'none'
     },
     btnContent: {
         color: 'white'
