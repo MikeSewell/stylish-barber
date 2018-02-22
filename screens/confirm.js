@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { Container, Header, Content, Button } from 'native-base';
+import Moment from 'moment';
 
 
 export default class Confirmation extends Component {
+
     render() {
         return (
             <View style={styles.wrapper}>
@@ -11,7 +13,7 @@ export default class Confirmation extends Component {
                 <Text style={styles.textContent}>Your appointment has been created!</Text>
                 <View>
                     <Text style={styles.textContent}>
-                        appointment datetime
+                        {Moment(this.props.nextAppt.start.dateTime).format("dddd, MMMM Do YYYY, h:mm:ss a")}
                     </Text>
                 </View>
 
