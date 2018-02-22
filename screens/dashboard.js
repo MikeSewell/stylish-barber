@@ -7,6 +7,7 @@ export default class Dashboard extends Component {
     static navigationOptions = {
         header: null
     }
+
     render() {
         return (
             <View style={styles.wrapper}>
@@ -16,7 +17,7 @@ export default class Dashboard extends Component {
                         source={require('../src/images/barCut.png')} />
                 </View>
                 <Button style={styles.btn}
-                    onPress={() => Linking.openURL('mailto:sharod.g@gmail.com?subject=Stylish Barber App&body=body')}
+                    onPress={() => Linking.openURL('mailto:sharod.g@gmail.com?subject=Stylish Barber App')}
                 ><Text style={styles.btnContent}> Email </Text></Button>
                 <Button style={styles.btn}
                     onPress={() => this.props.navigation.navigate('Services')}

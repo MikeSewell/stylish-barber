@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { Container, Header, Content, Button } from 'native-base';
 import { TabNavigator } from 'react-navigation'; // 1.0.0-beta.27
+import InstaPost from '../components/instaPost';
 
 export default class Appointment extends Component {
     static navigationOptions = {
@@ -11,6 +12,7 @@ export default class Appointment extends Component {
         return (
             <View style={styles.wrapper}>
                 <Text style={styles.textContent}>Gallery</Text>
+                <InstaPost />
                 <Button
                     onPress={() => this.props.navigation.goBack()}
                     style={styles.btn}

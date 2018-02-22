@@ -9,7 +9,7 @@ export default class NextAppt extends Component {
     }
     render() {
         return (
-            <ScrollView >
+            <ScrollView style={styles.scroll}>
                 <View style={styles.wrapper}>
                     <Text style={styles.titleContent}>Services</Text>
 
@@ -73,6 +73,9 @@ export default class NextAppt extends Component {
     }
 }
 const styles = StyleSheet.create({
+    scroll:{
+        backgroundColor: '#ba4d4d'
+    },
     wrapper: {
         flex: 1,
         backgroundColor: '#ba4d4d',
