@@ -46,7 +46,6 @@ export default class Appointment extends Component {
             }),
         });
         let currentDayAppt = await response.json();
-        // console.log(currentDayAppt);
         this.setState({currentDayAppt})
         const selectedDayTimes = []
         await currentDayAppt.forEach(element => {
@@ -55,18 +54,12 @@ export default class Appointment extends Component {
         this.setState({selectedDayTimes});
     }
     getTime(item, index) {
-        console.log('value item', item);
-        console.log('value index', index);
         this.setState({ selectedTime: index });
     }
     getService(item, index){
-        console.log('getService item',item);
-        console.log('getService index',index);
         this.setState({ selectedService: item });
     }
     async createAppt(){
-        console.log('selectedTime', this.state.selectedTime);
-        console.log('selectedService', this.state.selectedService);
         const response = await fetch('http://localhost:5000/v1/event/make', {
             method: 'POST',
             headers: {
